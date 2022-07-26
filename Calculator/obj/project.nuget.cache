@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xnrZjTnRPEYtNMHd51AASllByhCPLyXx7OUBHHklctaFsXd5w+vSdsJq+9C5GFuhCbrWYo8LJlLe9lpYwd7EmA==",
+  "dgSpecHash": "+1HE88KfJiyjJriyCrt6ZaiD3Mx7y069SioFNlyWcj+i6yWq6KPzTxYkCvXWM9xBUuLgvl56b8MHj+zWKeuUWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jacka\\Documents\\Programming\\CSharp\\TechSwitchTraining\\Calculator\\Calculator.csproj",
+  "projectFilePath": "C:\\Users\\jacka\\Documents\\Programming\\CSharp\\CSharpCalculator\\Calculator\\Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
