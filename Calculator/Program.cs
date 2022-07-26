@@ -1,23 +1,39 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Calculator // Note: actual namespace depends on the project name.
+namespace Calculator
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
+            PrintWelcomeMessage();
+
+            while (true)
+            {
+                PerformOneCalculation();
+            }
+        }
+
+        private static void PrintWelcomeMessage()
+        {
             Console.WriteLine("Welcome to the calculator!");
+        }
+
+        private static void PerformOneCalculation()
+        {
+            var inputOp = AskForOperator();
             
-            Console.WriteLine("Please enter an operator: (*/+-) ");
-            string inputOp = Console.ReadLine();
-            
-            Console.WriteLine("How many numbers do you want to " + inputOp + "? ");
+            Console.WriteLine($"How many numbers do you want to {inputOp}? ");
             int count = int.Parse(Console.ReadLine());
 
             int[] numbers = new int[count];
             for (int index = 0; index < count; index++)
             {
-                Console.Write("Please enter number " + (index + 1) + ": ");
+                Console.Write($"Please enter number {index + 1}: ");
                 numbers[index] = int.Parse(Console.ReadLine());
             }
 
@@ -45,21 +61,14 @@ namespace Calculator // Note: actual namespace depends on the project name.
                 }
             }
             
-            Console.WriteLine("The answer is: " + answer);
+            Console.WriteLine($"The answer is: {answer}");
+        }
 
-            /*
-            This is part of an old build, which only took 2 numbers and performed an operation on them...
-            
-            Console.WriteLine("Enter your first number:");
-            int number1 = int.Parse(Console.ReadLine());
-            
-            Console.WriteLine("Enter your second number:");
-            int number2 = int.Parse(Console.ReadLine());
-
-            
-            */
-            
-            Console.ReadLine();
+        private static string AskForOperator()
+        {
+            Console.WriteLine("Please enter an operator: (*/+-) ");
+            string inputOp = Console.ReadLine();
+            return inputOp;
         }
     }
 }
